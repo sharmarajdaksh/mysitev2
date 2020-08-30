@@ -1,8 +1,4 @@
-import {
-  faGithub,
-  faLinkedin,
-  faMedium,
-} from "@fortawesome/free-brands-svg-icons"
+import { FaGithub, FaLinkedin, FaMedium } from "react-icons/fa"
 
 export const urls = {
   linkedInUrl: "https://www.linkedin.com/in/sharmarajdaksh/",
@@ -17,19 +13,19 @@ export default {
       url: urls.githubUrl,
       label: "Github URL",
       tooltip: "My Github profile",
-      icon: faGithub,
+      icon: FaGithub,
     },
     {
       url: urls.linkedInUrl,
       label: "LinkedIn URL",
       tooltip: "My LinkedIn profile",
-      icon: faLinkedin,
+      icon: FaLinkedin,
     },
     {
       url: urls.mediumUrl,
       label: "Medium URL",
       tooltip: "My Medium Profile",
-      icon: faMedium,
+      icon: FaMedium,
     },
   ],
 }

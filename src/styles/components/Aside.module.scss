@@ -14,6 +14,7 @@
 
   background: #000;
   color: #aaa;
+  transition: background 0.25s, color 0.25s;
 
   .aside__element {
     font-size: 1.5rem;
