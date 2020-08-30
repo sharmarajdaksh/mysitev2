@@ -1,0 +1,33 @@
+name: Build and deploy
+
+on:
+  push:
+    branches: [ code ]
+  pull_request:
+    branches: [ code ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x, 14.x]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: npm install gatsby-cli -g
+    - run: npm ci
+    - run: gastby build
+    
+    - uses: JamesIves/github-pages-deploy-action@3.5.9
+      name: Deploy
+      with:
+        GITHUB_TOKEN: ${{ secrets.DEPLOY_SECRET_TOKEN }}
+        BRANCH: gh-pages
+        FOLDER: public
