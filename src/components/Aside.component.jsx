@@ -6,7 +6,6 @@ import ThemeContext from "../context/Theme.context"
 import asideComponentStyles from "../styles/components/Aside.module.scss"
 import classnames from "classnames"
 import config from "../config"
-import { faGithub } from "@fortawesome/free-brands-svg-icons"
 import { useContext } from "react"
 
 const Aside = () => {
@@ -47,7 +46,7 @@ const Aside = () => {
               ? asideComponentStyles.glowonhover
               : asideComponentStyles.glowonhoverLight
           )}
-          key={config.email}
+          key={"emailtext"}
         >
           <a href={`mailto:${config.email}`}>{config.email}</a>
         </div>
@@ -59,7 +58,7 @@ const Aside = () => {
               ? asideComponentStyles.glowonhover
               : asideComponentStyles.glowonhoverLight
           )}
-          key={config.email}
+          key={"emailicon"}
         >
           <a href={`mailto:${config.email}`}>
             <FontAwesomeIcon icon={faAt} />
