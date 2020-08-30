@@ -1,0 +1,25 @@
+@mixin breakpoint-phone {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+@mixin breakpoint-tablet-vertical {
+  @media (max-width: 900px) {
+    @content;
+  }
+}
+@mixin breakpoint-tablet-horizontal {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+@mixin breakpoint-desktop {
+  @media (max-width: 1800px) {
+    @content;
+  }
+}
+@mixin breakpoint-desktop-large {
+  @media (min-width: 1800px) {
+    @content;
+  }
+}

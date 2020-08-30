@@ -1,0 +1,27 @@
+@import "../utils/colors";
+@import "../utils/breakpoints";
+
+.main__shell {
+  color: #fff;
+  background-color: black;
+  flex: 1;
+
+  .main__section {
+    height: 100%;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
+    &:nth-child(2) {
+      background-color: #222;
+    }
+
+    @include breakpoint-tablet-vertical {
+      width: 100%;
+      max-width: 100vw;
+    }
+  }
+}
