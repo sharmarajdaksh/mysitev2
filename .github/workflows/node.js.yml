@@ -2,13 +2,12 @@ name: Build and deploy
 
 on:
   push:
-    branches: [ code ]
+    branches: [code]
   pull_request:
-    branches: [ code ]
+    branches: [code]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:
@@ -16,18 +15,18 @@ jobs:
         node-version: [12.x]
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - run: npm install gatsby-cli -g
-    - run: npm ci
-    - run: gatsby build
-    
-    - uses: JamesIves/github-pages-deploy-action@3.5.9
-      name: Deploy
-      with:
-        GITHUB_TOKEN: ${{ secrets.DEPLOY_SECRET_TOKEN }}
-        BRANCH: gh-pages
-        FOLDER: public
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm install gatsby-cli -g
+      - run: npm ci
+      - run: gatsby build --prefix-paths
+
+      - uses: JamesIves/github-pages-deploy-action@3.5.9
+        name: Deploy
+        with:
+          GITHUB_TOKEN: ${{ secrets.DEPLOY_SECRET_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: public

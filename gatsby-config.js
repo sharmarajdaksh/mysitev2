@@ -6,6 +6,7 @@
 
 module.exports = {
   /* Your site config here */
+  pathPrefix: "/mysitev2",
   plugins: [
     `gatsby-plugin-sass`,
     {
