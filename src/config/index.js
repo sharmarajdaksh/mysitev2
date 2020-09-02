@@ -28,4 +28,9 @@ export default {
       icon: FaMedium,
     },
   ],
+  landing: {
+    preText: "Hi, I'm",
+    name: "Dakshraj Sharma.",
+    postText: "I write magic spells in my code editor.",
+  },
 }
