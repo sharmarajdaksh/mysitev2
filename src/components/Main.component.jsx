@@ -1,5 +1,6 @@
+import React, { useEffect } from "react"
+
 import Landing from "./Landing.component"
-import React from "react"
 import ThemeContext from "../context/Theme.context"
 import classnames from "classnames"
 import mainComponentStyles from "../styles/components/Main.module.scss"
@@ -7,6 +8,16 @@ import { useContext } from "react"
 
 const Main = () => {
   const { darkMode } = useContext(ThemeContext)
+
+  const handleScroll = () => {}
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll, { passive: true })
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
 
   return (
     <main

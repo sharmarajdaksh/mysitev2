@@ -1,5 +1,8 @@
+@import "../utils/breakpoints";
+
 .landing {
   line-height: 1.2;
+  margin-right: 150px;
   .preText {
     font-size: 1.5rem;
   }
@@ -9,6 +12,10 @@
   }
   .postText {
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: 300;
+  }
+  .longText {
+    margin-top: 1rem;
+    max-width: 40rem;
   }
 }
