@@ -35,5 +35,7 @@ export default {
     mainPara:
       "I'm a software engineer from India attempting to learn everything there is to learn, and then some more.",
   },
-  goodreadsApiKey: "KADkfwjgZmRlgnlHOH7HA",
+  goodreadsCurrentlyReadingEndpoint:
+    "https://cors-anywhere.herokuapp.com/https://www.goodreads.com/review/list/21277948.xml?key=KADkfwjgZmRlgnlHOH7HA&&shelf=currently-reading",
+  // "https://www.goodreads.com/review/list/21277948.xml?key=KADkfwjgZmRlgnlHOH7HA&&shelf=currently-reading",
 }

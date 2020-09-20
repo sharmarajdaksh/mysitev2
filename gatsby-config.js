@@ -8,6 +8,7 @@ module.exports = {
   /* Your site config here */
   pathPrefix: "/mysitev2",
   plugins: [
+    `gatsby-plugin-layout`,
     `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
