@@ -12,10 +12,7 @@ const Landing = () => {
       </p>
 
       <p className={landingComponentStyles.longText}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ad
-        esse, neque illo quas ipsam natus officiis sunt modi assumenda
-        exercitationem dicta deleniti doloremque quibusdam eveniet cumque facere
-        atque. Labore.
+        {config.landing.mainPara}
       </p>
     </div>
   )

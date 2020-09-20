@@ -32,5 +32,8 @@ export default {
     preText: "Hi, I'm",
     name: "Dakshraj Sharma.",
     postText: "I write magic spells in my code editor.",
+    mainPara:
+      "I'm a software engineer from India attempting to learn everything there is to learn, and then some more.",
   },
+  goodreadsApiKey: "KADkfwjgZmRlgnlHOH7HA",
 }
