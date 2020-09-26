@@ -44,18 +44,6 @@ const Aside = () => {
             ? asideComponentStyles.glowonhover
             : asideComponentStyles.glowonhoverLight
         )}
-        key={"emailtext"}
-      >
-        <a href={`mailto:${config.email}`}>{config.email}</a>
-      </div>
-      <div
-        className={classnames(
-          asideComponentStyles.aside__element,
-          asideComponentStyles.aside__emailMobile,
-          darkMode
-            ? asideComponentStyles.glowonhover
-            : asideComponentStyles.glowonhoverLight
-        )}
         key={"emailicon"}
       >
         <a href={`mailto:${config.email}`}>

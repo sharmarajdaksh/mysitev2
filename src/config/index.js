@@ -28,6 +28,10 @@ export default {
       icon: FaMedium,
     },
   ],
+  404: {
+    message:
+      "Whoopsie! You shouldn't be here... Redirecting you to my home page",
+  },
   landing: {
     preText: "Hi, I'm",
     name: "Dakshraj Sharma.",

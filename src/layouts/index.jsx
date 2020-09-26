@@ -1,13 +1,14 @@
-import "../styles/utils/reset.scss"
-import "../styles/utils/index.scss"
-
 import React, { useCallback, useState } from "react"
+import { useEffect } from "react"
 
 import Aside from "../components/Aside.component"
+import Navbar from "../components/Navbar.component"
 import ThemeContext from "../context/Theme.context"
 import indexPageStyles from "../styles/pages/index.module.scss"
 import { supportsDarkMode } from "../utils"
-import { useEffect } from "react"
+
+import "../styles/utils/reset.scss"
+import "../styles/utils/index.scss"
 
 const Layout = props => {
   const [darkMode, setDarkMode] = useState(true)
@@ -41,6 +42,7 @@ const Layout = props => {
   return (
     <ThemeContext.Provider value={{ darkMode, toggleDarkMode }}>
       <div className={indexPageStyles.page__shell}>
+        <Navbar></Navbar>
         <Aside></Aside>
         {props.children}
       </div>

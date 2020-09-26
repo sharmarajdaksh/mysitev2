@@ -2,7 +2,6 @@
 
 .page__shell {
   display: flex;
-  flex-flow: row;
   max-width: 100vw;
 
   @include breakpoint-tablet-vertical {

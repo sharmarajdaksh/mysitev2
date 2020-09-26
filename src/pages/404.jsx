@@ -1,13 +1,21 @@
-import React from "react"
-
-import Landing from "./Landing.component"
-import ThemeContext from "../context/Theme.context"
+import React, { useContext, useEffect } from "react"
 import classnames from "classnames"
-import mainComponentStyles from "../styles/components/Main.module.scss"
-import { useContext } from "react"
+import { navigate } from "gatsby"
 
-const Main = () => {
+import ThemeContext from "../context/Theme.context"
+import config from "../config"
+
+import mainComponentStyles from "../styles/components/Main.module.scss"
+import page404Styles from "../styles/pages/404.module.scss"
+
+const Page404 = () => {
   const { darkMode } = useContext(ThemeContext)
+
+  useEffect(() => {
+    setTimeout(() => {
+      navigate("/")
+    }, 3000)
+  })
 
   return (
     <main
@@ -17,13 +25,10 @@ const Main = () => {
       )}
     >
       <section className={mainComponentStyles.main__section}>
-        <Landing />
-      </section>
-      <section className={mainComponentStyles.main__section}>
-        dakshraj sharma
+        <div className={page404Styles.main404}>{config[404].message}</div>
       </section>
     </main>
   )
 }
 
-export default Main
+export default Page404

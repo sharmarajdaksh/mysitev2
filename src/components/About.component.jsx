@@ -48,7 +48,7 @@ const About = () => {
         darkMode ? "" : mainComponentStyles.main__shellLight
       )}
     >
-      {booksData && (
+      {loadingBooksData && (
         <section className={mainComponentStyles.main__section}>
           <CurrentlyReading booksData={booksData} />
         </section>

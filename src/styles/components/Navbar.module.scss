@@ -1,0 +1,37 @@
+.navbar__shell {
+  position: fixed;
+  right: 0;
+  display: flex;
+  padding-top: 1rem;
+  padding-right: 2rem;
+  flex-flow: row-reverse;
+
+  transition: background 0.25s, color 0.25s;
+
+  color: #aaa;
+
+  ul {
+    font-size: 1.25rem;
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: row;
+
+    li {
+      font-weight: bold;
+      cursor: pointer;
+      margin-right: 1rem;
+      transition: all 0.25s;
+      &:hover {
+        color: #eee;
+      }
+    }
+  }
+}
+
+.navbar__shellLight {
+  color: #555;
+
+  ul > li:hover {
+    color: #222;
+  }
+}
